@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:AppDemo"
+             x:Class="AppDemo.MainPage"
+             xmlns:vm="clr-namespace:AppDemo.ViewModels">
+    <ContentPage.BindingContext>
+        <vm:MainViewModel/>
+    </ContentPage.BindingContext>
+    <Grid>
+        <!-- Place new controls here -->
+        <Label Text="{Binding TextLabel}" 
+           HorizontalOptions="Center"
+           VerticalOptions="CenterAndExpand" />
+        <Button BackgroundColor="Red" HeightRequest="30" WidthRequest="30" VerticalOptions="Center" HorizontalOptions="Start" Text="Navegar" Command="{Binding NavigateFirstCommand}"/>
+        <Entry HeightRequest="80" WidthRequest="80" HorizontalOptions="End" Text="{Binding TextLabel}" VerticalOptions="Center" Placeholder="Escribame"></Entry>
+    </Grid>
+</ContentPage>
